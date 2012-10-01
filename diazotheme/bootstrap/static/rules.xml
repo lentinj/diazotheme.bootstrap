@@ -182,6 +182,11 @@
         <li><xsl:copy-of css:select="#personaltools-login"/></li>
     </replace>
 
+    <drop css:theme="#xmpp-viewlet" css:if-not-content="#xmpp-viewlet"/>
+    <replace css:theme="#site-stream-link" css:content="#site-stream-link" />
+    <replace css:theme-children="#toggle-online-users" css:content-children="#toggle-online-users" />
+    <replace css:theme-children="#online-users" css:content-children="#online-users" />
+
     <copy css:theme=".navbar-fixed-top .brand" css:content="#portal-logo" attributes="href"/>
     <replace css:theme-children=".breadcrumb">
         <xsl:for-each css:select="#portal-breadcrumbs > span">
